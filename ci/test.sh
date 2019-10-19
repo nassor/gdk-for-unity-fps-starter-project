@@ -8,7 +8,7 @@ fi
 
 cd "$(dirname "$0")/../"
 
-source .shared-ci/scripts/pinned-tools.sh
+source ./.shared-ci/scripts/pinned-tools.sh
 
 PROJECT_DIR="$(pwd)"
 mkdir -p "${PROJECT_DIR}/logs/"

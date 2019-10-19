@@ -1,4 +1,4 @@
-# The SpatialOS GDK for Unity FPS Starter Project readme (alpha)
+# The SpatialOS GDK for Unity FPS Starter Project readme (alpha) [with github actions]
 
 This starter project is designed to help you get started quickly with the [SpatialOS GDK for Unity](https://github.com/spatialos/gdk-for-unity).
 

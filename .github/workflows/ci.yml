@@ -18,4 +18,4 @@ jobs:
         repository: spatialos/gdk-for-unity-shared-ci
         ref: 16af8b4696032d897ba4d8075eaa61355f06f488
         path: ./code/.shared-ci
-    - run: bash ./code/ci/test.sh
+    - run: bash "${GITHUB_WORKSPACE}/code/ci/test.sh"

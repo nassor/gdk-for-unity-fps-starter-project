@@ -16,5 +16,4 @@ jobs:
       with:
         repository: spatialos/gdk-for-unity-shared-ci
         path: ./shared-ci
-        fetch-depth: 1
     - run: bash ./ci/test.sh

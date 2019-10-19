@@ -10,8 +10,11 @@ jobs:
     
     steps:
     - uses: actions/checkout@v1
+      with:
+        fetch-depth: 1
     - uses: actions/checkout@v1
       with:
-        repository: https://github.com/spatialos/gdk-for-unity-shared-ci
+        repository: spatialos/gdk-for-unity-shared-ci
         path: ./shared-ci
+        fetch-depth: 1
     - run: bash ./ci/test.sh

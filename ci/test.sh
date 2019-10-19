@@ -8,7 +8,7 @@ fi
 
 cd "$(dirname "$0")/../"
 
-source "${GITHUB_WORKSPACE}/code/.shared-ci/scripts/pinned-tools.sh"
+source "${GITHUB_WORKSPACE}/.shared-ci/scripts/pinned-tools.sh"
 
 PROJECT_DIR="$(pwd)"
 mkdir -p "${PROJECT_DIR}/logs/"

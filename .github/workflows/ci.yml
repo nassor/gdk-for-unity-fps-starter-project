@@ -9,6 +9,7 @@ jobs:
         unity-tag: [2019.2.8f1]
     
     steps:
+    - uses: actions/setup-dotnet@v1
     - uses: actions/checkout@v1
     - run: mkdir -p ./gdk-for-unity-fps-starter-project/.shared-ci
     - uses: actions/checkout@v1

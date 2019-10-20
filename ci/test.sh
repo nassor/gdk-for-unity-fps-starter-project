@@ -7,9 +7,8 @@ if [[ -n "${DEBUG-}" ]]; then
 fi
 
 cd "$(dirname "$0")/../"
-ls -lah
-ls -lah ./.shared-ci
-source ./.shared-ci/scripts/pinned-tools.sh
+pwd
+source .shared-ci/scripts/pinned-tools.sh
 
 PROJECT_DIR="$(pwd)"
 mkdir -p "${PROJECT_DIR}/logs/"

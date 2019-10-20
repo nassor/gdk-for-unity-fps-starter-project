@@ -7,7 +7,7 @@ if [[ -n "${DEBUG-}" ]]; then
 fi
 
 cd "$(dirname "$0")/../"
-la -lah
+ls -lah
 source "${GITHUB_WORKSPACE}/.shared-ci/scripts/pinned-tools.sh"
 
 PROJECT_DIR="$(pwd)"

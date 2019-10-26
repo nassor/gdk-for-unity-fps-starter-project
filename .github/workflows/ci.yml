@@ -7,14 +7,24 @@ jobs:
     strategy:
       matrix:
         unity-tag: [2019.2.8f1]
-    
+
+
     steps:
     - uses: actions/setup-dotnet@v1
     - uses: actions/checkout@v1
+    - run: mkdir -p ./gdk-for-unity-fps-starter-project/.spatialos
+    - run: mkdir -p ~/.ivy2/
+    - run: touch ~/.ivy2/improbable.credentials
+    - run: echo "${{ secrets.improbablefps }}" > ~/.ivy2/improbable.credentials
+    - run: cat ~/.ivy2/improbable.credentials
+    - run: wget -O ./gdk-for-unity-fps-starter-project/.spatialos/spatialos https://console.improbable.io/toolbelt/download/latest/linux
+    - run: chmod a+x ./gdk-for-unity-fps-starter-project/.spatialos/spatialos
+    - run: ./gdk-for-unity-fps-starter-project/.spatialos/spatialos local launch
     - run: mkdir -p ./gdk-for-unity-fps-starter-project/.shared-ci
     - uses: actions/checkout@v1
       with:
         repository: spatialos/gdk-for-unity-shared-ci
         ref: 16af8b4696032d897ba4d8075eaa61355f06f488
         path: ./gdk-for-unity-fps-starter-project/.shared-ci/
-    - run: bash ./ci/test.sh
+    - run: ls -la
+    # - run: bash ./ci/test.sh
